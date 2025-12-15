@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
-import HeroBillboardMetrics from '@/components/sections/hero/HeroBillboardMetrics';
+import HeroBillboardGallery from '@/components/sections/hero/HeroBillboardGallery';
 import ProductCardOne from '@/components/sections/product/ProductCardOne';
 import SplitAboutMetric from '@/components/sections/about/SplitAboutMetric';
 import TestimonialCardThree from '@/components/sections/testimonial/TestimonialCardThree';
@@ -39,7 +39,7 @@ export default function LandingPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroBillboardMetrics
+        <HeroBillboardGallery
           title="Your Daily Coffee Escape"
           description="Discover premium, handcrafted coffee drinks made with passion. From rich espresso to creamy cappuccinos, every cup tells a story."
           tag="Artisan Coffee"
@@ -48,14 +48,12 @@ export default function LandingPage() {
             { text: "View Menu", href: "menu" },
             { text: "Order Now", href: "contact" }
           ]}
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800052911-imcos76d.jpg"
-          imageAlt="BrewHaven coffee shop interior with coffee drinks"
-          frameStyle="card"
-          metricsLabel="Trusted by coffee lovers across the city since 2015"
-          metrics={[
-            { id: "1", value: "500+", label: "Daily Customers" },
-            { id: "2", value: "8", label: "Coffee Varieties" },
-            { id: "3", value: "4.9/5", label: "Average Rating" }
+          mediaItems={[
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800054105-41kdxcxx.jpg", imageAlt: "Rich espresso shot" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800055395-nihue9tr.jpg", imageAlt: "Smooth cappuccino with foam art" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800056639-nigj468e.jpg", imageAlt: "Refreshing iced cold brew" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800057731-a6oyv2eo.jpg", imageAlt: "Green matcha latte drink" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800052911-imcos76d.jpg", imageAlt: "BrewHaven coffee shop interior with coffee drinks" }
           ]}
         />
       </div>
