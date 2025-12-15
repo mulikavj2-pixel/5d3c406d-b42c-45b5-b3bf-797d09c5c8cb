@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import HeroBillboardGallery from '@/components/sections/hero/HeroBillboardGallery';
 import ProductCardOne from '@/components/sections/product/ProductCardOne';
-import SplitAboutMetric from '@/components/sections/about/SplitAboutMetric';
+import AboutPhoneTimeline from '@/components/sections/about/AboutPhoneTimeline';
 import TestimonialCardThree from '@/components/sections/testimonial/TestimonialCardThree';
 import FaqBase from '@/components/sections/faq/FaqBase';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
@@ -102,15 +102,23 @@ export default function LandingPage() {
       </div>
 
       <div id="about" data-section="about">
-        <SplitAboutMetric
+        <AboutPhoneTimeline
           title="About BrewHaven"
+          description="At BrewHaven, we believe coffee is more than a beverage—it's a moment of connection. Since 2015, we've been sourcing the finest beans from sustainable farms worldwide and crafting each cup with precision and care."
+          tag="Our Mission"
+          textboxLayout="default"
+          phoneOne={{
+            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800054105-41kdxcxx.jpg",
+            imageAlt: "BrewHaven espresso preparation"
+          }}
+          phoneTwo={{
+            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/uploaded-1765800055395-nihue9tr.jpg",
+            imageAlt: "BrewHaven barista crafting cappuccino"
+          }}
           useInvertedBackground="noInvert"
-          description={[
-            "At BrewHaven, we believe coffee is more than a beverage—it's a moment of connection. Since 2015, we've been sourcing the finest beans from sustainable farms worldwide and crafting each cup with precision and care."
-          ]}
-          metrics={[
-            { label: "Years of Excellence", value: "9+" },
-            { label: "Beans Sourced Globally", value: "15+" }
+          buttons={[
+            { text: "Learn Our Story", href: "https://brewhaven.local" },
+            { text: "Visit Us", href: "contact" }
           ]}
         />
       </div>
